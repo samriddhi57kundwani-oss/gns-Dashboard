@@ -1,0 +1,28 @@
+.info-container {
+  background-color: #0d1117;
+  color: #e0e0e0;
+  padding: 25px;
+  min-height: 100vh;
+}
+
+.info-card {
+  background: #1c1f26;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.info-card h3 {
+  color: #00bfa6;
+  margin-bottom: 10px;
+}
+
+.info-container h2 {
+  color: #00bfa6;
+  margin-bottom: 15px;
+}
+
+.info-card p {
+  line-height: 1.6;
+}

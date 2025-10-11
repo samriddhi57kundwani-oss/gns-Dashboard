@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #011222;
+    color: white;
+    padding: 10px 20px;
+    height: 55px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .header-left h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  .highlight {
+    color: #4dd0e1;
+    font-weight: 600;
+  }
+  
+  .menu-icon {
+    cursor: pointer;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .header-icon {
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .header-icon:hover {
+    color: #4dd0e1;
+  }
+  

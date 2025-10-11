@@ -1,0 +1,96 @@
+.dashboard-container {
+  padding: 30px;
+  color: #fff;
+  background-color: #080423;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+.section-title {
+  text-align: center;
+  color: #00eaff;
+  text-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+  margin-bottom: 30px;
+}
+
+/* Horizontal Metric Row */
+.metrics-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+  flex-wrap: nowrap; /* keeps them in one line */
+  margin-bottom: 40px;
+}
+
+.metric-card {
+  background: linear-gradient(145deg, #1b0c54, #2a1378);
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  min-width: 200px;
+  flex: 1;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.metric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 234, 255, 0.3);
+}
+
+.metric-card h3 {
+  color: #a5a5ff;
+  font-size: 16px;
+}
+
+.metric-card p {
+  font-size: 22px;
+  margin-top: 8px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Chart container */
+.main-chart {
+  background: #10093a;
+  border-radius: 20px;
+  padding: 25px;
+  margin: 0 auto 40px;
+  width: 95%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.main-chart h3 {
+  text-align: center;
+  color: #00eaff;
+  margin-bottom: 15px;
+}
+
+/* Bottom summary */
+.summary-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.summary-box {
+  background: #1a1458;
+  border-radius: 16px;
+  padding: 15px 25px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 0 8px rgba(0, 234, 255, 0.3);
+}
+
+.summary-box h4 {
+  color: #a5a5ff;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.summary-box p {
+  font-size: 18px;
+  color: #fff;
+}

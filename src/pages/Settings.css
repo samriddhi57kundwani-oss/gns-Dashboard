@@ -1,0 +1,42 @@
+.settings-container {
+  background-color: #0d1117;
+  color: #e0e0e0;
+  padding: 25px;
+  min-height: 100vh;
+}
+
+.settings-section {
+  background: #1c1f26;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.settings-section h3 {
+  color: #00bfa6;
+  margin-bottom: 10px;
+}
+
+.theme-btn,
+.reset-btn {
+  background: #00bfa6;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.theme-btn:hover,
+.reset-btn:hover {
+  background: #00d4b3;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+}

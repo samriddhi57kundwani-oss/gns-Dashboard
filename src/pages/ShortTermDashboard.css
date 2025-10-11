@@ -1,0 +1,90 @@
+/* 🌙 ShortTermDashboard.css — matches LongTerm dark theme dashboard */
+
+.dashboard-container {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Top cards */
+.cards-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.metric-card {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+}
+
+.metric-card h3 {
+  font-size: 28px;
+  color: #38bdf8;
+  margin-bottom: 5px;
+}
+
+.metric-card p {
+  font-size: 14px;
+  color: #cbd5e1;
+}
+
+/* Chart grid layout */
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px;
+  align-items: center;
+}
+
+.chart-box,
+.summary-box,
+.observations-box {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Titles */
+.chart-title {
+  text-align: center;
+  font-size: 15px;
+  color: #e2e8f0;
+  margin-top: 10px;
+}
+
+/* Text colors */
+.summary-box h4,
+.observations-box h4 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.summary-box ul li,
+.observations-box ul li {
+  color: #94a3b8;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+ul li::before {
+  content: "• ";
+  color: #38bdf8;
+}

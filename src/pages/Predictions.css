@@ -1,0 +1,62 @@
+.predictions-container {
+  background-color: #080423;
+  color: #fff;
+  min-height: 100vh;
+  padding: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title {
+  text-align: center;
+  color: #00eaff;
+  text-shadow: 0 0 10px rgba(0, 234, 255, 0.6);
+  margin-bottom: 30px;
+}
+
+.metrics-row {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: nowrap;
+  margin-bottom: 40px;
+}
+
+.metric-card {
+  background: linear-gradient(145deg, #1b0c54, #2a1378);
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  min-width: 200px;
+  flex: 1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 234, 255, 0.3);
+}
+
+.metric-card h3 {
+  color: #a5a5ff;
+}
+
+.metric-card p {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-top: 8px;
+}
+
+.chart-box {
+  background: #10093a;
+  border-radius: 18px;
+  padding: 25px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.chart-box h3 {
+  text-align: center;
+  color: #00eaff;
+  margin-bottom: 15px;
+}
