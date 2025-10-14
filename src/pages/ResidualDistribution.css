@@ -1,70 +1,108 @@
 .residual-container {
-  background-color: #080423;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
+  padding: 25px;
+  background-color: #081526;
   min-height: 100vh;
-  padding: 30px;
+  font-family: "Poppins", sans-serif;
+  color: #dbe9ff;
 }
 
-.section-title {
-  text-align: center;
-  color: #00eaff;
-  text-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+.title {
+  font-size: 28px;
+  color: #66b3ff;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-shadow: 0 0 12px rgba(0, 150, 255, 0.6);
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #9ecaff;
   margin-bottom: 30px;
 }
 
-.metrics-row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin-bottom: 40px;
+.residual-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: start;
 }
 
-.metric-card {
-  background: linear-gradient(145deg, #1b0c54, #2a1378);
+.chart-section {
+  background: linear-gradient(145deg, #0d1b2e, #0b1625);
   padding: 20px;
   border-radius: 16px;
-  text-align: center;
-  min-width: 200px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  transition: 0.2s;
+  box-shadow: 0 0 18px rgba(0, 150, 255, 0.25);
+  position: relative;
 }
 
-.metric-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(0, 234, 255, 0.3);
+.fit-label {
+  position: absolute;
+  top: 80px;
+  right: 80px;
+  background: rgba(0, 150, 255, 0.15);
+  color: #aee7ff;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #00bfff;
 }
 
-.metric-card h3 {
-  color: #a5a5ff;
-  font-size: 1rem;
+.note-card {
+  background: rgba(10, 25, 40, 0.8);
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 20px;
+  border: 1px solid #1a3b5c;
+  color: #bcdfff;
 }
 
-.metric-card p {
-  color: #fff;
-  font-size: 1.4rem;
-  font-weight: 600;
+.note-card li {
+  margin-bottom: 6px;
+  font-size: 15px;
+  line-height: 1.4;
+  list-style: none;
 }
 
-.charts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 30px;
-  justify-items: center;
+.note-card li::before {
+  content: "• ";
+  color: #00bfff;
+  font-weight: bold;
 }
 
-.chart-box {
-  background: #10093a;
-  border-radius: 18px;
-  padding: 20px;
-  width: 100%;
-  max-width: 600px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+.stats-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.chart-box h3 {
-  color: #00eaff;
-  margin-bottom: 15px;
-  text-align: center;
+.stat-card {
+  background: linear-gradient(145deg, #0f2035, #0a1727);
+  border-radius: 14px;
+  padding: 15px 18px;
+  box-shadow: 0 0 14px rgba(0, 120, 255, 0.25);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 200, 255, 0.35);
+}
+
+.stat-card h3 {
+  font-size: 16px;
+  color: #9ccfff;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 24px;
+  color: #00e0ff;
+  font-weight: 700;
+  margin-bottom: 4px;
+  text-shadow: 0 0 10px #00bfff;
+}
+
+.stat-card span {
+  font-size: 13px;
+  color: #a5c7ff;
 }
