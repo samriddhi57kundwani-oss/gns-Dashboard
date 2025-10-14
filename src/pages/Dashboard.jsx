@@ -15,7 +15,7 @@ import {
   Pie,
   Cell,
 } from "recharts";
-import "./dashboard.css";
+import "./Dashboard.css";
 
 const Dashboard = () => {
   // state toggles
