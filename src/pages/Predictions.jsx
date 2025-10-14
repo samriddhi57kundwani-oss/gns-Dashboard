@@ -1,102 +1,100 @@
 import React from "react";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  ResponsiveContainer,
-  CartesianGrid,
-  BarChart,
-  Bar,
-} from "recharts";
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, BarChart, Bar, ResponsiveContainer } from "recharts";
 import "./Predictions.css";
 
 const Predictions = () => {
-  const predictionData = [
-    { time: "00:00", predicted: 1.2, actual: 1.1 },
-    { time: "01:00", predicted: 1.5, actual: 1.3 },
-    { time: "02:00", predicted: 1.6, actual: 1.4 },
-    { time: "03:00", predicted: 1.3, actual: 1.1 },
-    { time: "04:00", predicted: 1.8, actual: 1.7 },
+  const errorTrendData = [
+    { time: "10:00", actual: 25, predicted: 20 },
+    { time: "20:00", actual: 40, predicted: 35 },
+    { time: "30:00", actual: 30, predicted: 28 },
+    { time: "40:00", actual: 45, predicted: 38 },
+    { time: "50:00", actual: 35, predicted: 32 },
+    { time: "60:00", actual: 28, predicted: 25 },
+  ];
+
+  const accuracyData = [
+    { interval: "0-10", value: 25 },
+    { interval: "10-20", value: 22 },
+    { interval: "20-30", value: 18 },
+    { interval: "30-40", value: 15 },
+    { interval: "40-50", value: 10 },
   ];
 
   return (
     <div className="predictions-container">
-      <h2 className="section-title">Error Predictions Overview</h2>
+      <h1 className="page-title">Prediction Results</h1>
 
-      {/* Cards Row */}
-      <div className="metrics-row">
+      {/* Metric Cards */}
+      <div className="metrics-grid">
         <div className="metric-card">
-          <h3>Model Accuracy</h3>
-          <p>92%</p>
+          <h4 className="metric-heading">Predicted Mean Error</h4>
+          <p className="metric-value highlight">32.56 ns</p>
         </div>
         <div className="metric-card">
-          <h3>Latest Prediction</h3>
-          <p>1.45 m</p>
+          <h4 className="metric-heading">Predicted Clock Error Range</h4>
+          <p className="metric-value highlight">20.15 ns</p>
         </div>
         <div className="metric-card">
-          <h3>Next Update</h3>
-          <p>30 mins</p>
+          <h4 className="metric-heading">Predicted Ephemeris Error Range</h4>
+          <p className="metric-value highlight">1.87 m</p>
         </div>
         <div className="metric-card">
-          <h3>Model Status</h3>
-          <p className="status-text">✅ Running</p>
+          <h4 className="metric-heading">Confidence Level</h4>
+          <p className="metric-value highlight">95%</p>
         </div>
       </div>
 
-      {/* Main Line Chart */}
-      <div className="chart-box">
-        <h3>Predicted vs Actual Error</h3>
-        <ResponsiveContainer width="100%" height={350}>
-          <LineChart data={predictionData}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#2b2b6d" />
-            <XAxis dataKey="time" stroke="#fff" />
-            <YAxis stroke="#fff" />
-            <Tooltip
-              contentStyle={{
-                backgroundColor: "#1a1445",
-                border: "none",
-                borderRadius: "10px",
-              }}
-              labelStyle={{ color: "#00eaff" }}
-            />
-            <Line
-              type="monotone"
-              dataKey="predicted"
-              stroke="#00eaff"
-              strokeWidth={3}
-            />
-            <Line
-              type="monotone"
-              dataKey="actual"
-              stroke="#ff9f43"
-              strokeWidth={3}
-            />
-          </LineChart>
-        </ResponsiveContainer>
+      {/* Graphs Section */}
+      <div className="charts-grid">
+        <div className="chart-card">
+          <h3 className="chart-heading">Actual vs Predicted Error Trend</h3>
+          <ResponsiveContainer width={500} height={250}>
+            <LineChart  data={errorTrendData}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#1a2c3f" />
+              <XAxis dataKey="time" tick={{ fill: "#cfe8ff" }} />
+              <YAxis tick={{ fill: "#cfe8ff" }} />
+              <Tooltip contentStyle={{ backgroundColor: "#13283b", color: "#fff" }} />
+              <Line type="monotone" dataKey="actual" stroke="#ff7300" strokeWidth={2} />
+              <Line type="monotone" dataKey="predicted" stroke="#00bfff" strokeWidth={2} />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
+
+        <div className="chart-card">
+          <h3 className="chart-heading">Prediction Accuracy</h3>
+          <ResponsiveContainer width={500} height={250} >
+            <BarChart data={accuracyData}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#1a2c3f" />
+              <XAxis dataKey="interval" tick={{ fill: "#cfe8ff" }} />
+              <YAxis tick={{ fill: "#cfe8ff" }} />
+              <Tooltip contentStyle={{ backgroundColor: "#13283b", color: "#fff" }} />
+              <Bar dataKey="value" fill="#00bcd4" barSize={25} radius={[8, 8, 0, 0]} />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
       </div>
 
-      {/* Bar Chart */}
-      <div className="chart-box">
-        <h3>Prediction Error Magnitude</h3>
-        <ResponsiveContainer width="100%" height={300}>
-          <BarChart data={predictionData}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#2b2b6d" />
-            <XAxis dataKey="time" stroke="#fff" />
-            <YAxis stroke="#fff" />
-            <Tooltip
-              contentStyle={{
-                backgroundColor: "#1a1445",
-                border: "none",
-                borderRadius: "10px",
-              }}
-              labelStyle={{ color: "#00eaff" }}
-            />
-            <Bar dataKey="predicted" fill="#00eaff" radius={6} />
-            <Bar dataKey="actual" fill="#ff9f43" radius={6} />
-          </BarChart>
-        </ResponsiveContainer>
+      {/* Textual Insights */}
+      <div className="insights-grid">
+        <div className="insight-card">
+          <h3 className="insight-heading">Observations</h3>
+          <ul className="insight-list">
+            <li>Clock error predicted slightly higher than ephemeris error.</li>
+            <li>Predicted trend follows actual variations closely.</li>
+            <li>Consistency improves in stable intervals (20–40s range).</li>
+            <li>Low deviation in predicted vs actual during steady conditions.</li>
+          </ul>
+        </div>
+
+        <div className="insight-card">
+          <h3 className="insight-heading">Highlights</h3>
+          <ul className="insight-list">
+            <li>Predictions align with actual error patterns across intervals.</li>
+            <li>Model accuracy improves with increasing sample density.</li>
+            <li>Confidence level remains consistently above 90%.</li>
+            <li>Residual distribution remains within acceptable limits.</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
